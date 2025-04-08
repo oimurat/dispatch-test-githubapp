@@ -32,7 +32,7 @@ jobs:
               with:
                   token: ${{ secrets.GITHUB_TOKEN }}
                   commit-message: "auto update manifest"
-                  title: "auto-update manifest"
+                  title: "GithubAppを用いた自動マージ"
                   body: "This PR was created automatically by GitHub Actions."
                   branch: bot/update-manifest--${{ env.GITHUB_SHA }}
                   base: main
