@@ -17,7 +17,7 @@ spec:
         spec:
             containers:
                 - name: caddy-server
-                  image: {{ .Values.deployment.template.frontendImageA }} #フロントエンドのコンテナイメージを指定
+                  image: {{ .Values.deployment.template.frontendImage }} #フロントエンドのコンテナイメージを指定
                   ports:
                     - containerPort: {{ .Values.service.ports.frontendTargetPort }} #コンテナポートを指定
                       protocol: TCP #プロトコルを指定
