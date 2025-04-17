@@ -7,8 +7,8 @@ namespace:
 deployment:
   replicaCount: 1
   template:
-    frontendImage: "nrt.ocir.io/nrcmxxv7sjse/ec_service_test:nodejs-stg-20250417-111639"
-    backendImage: "nrt.ocir.io/nrcmxxv7sjse/ec_service_test:python-stg-20250417-111639"
+    frontendImage: "nrt.ocir.io/nrcmxxv7sjse/ec_service_test:nodejs-stg-20250417-114244"
+    backendImage: "nrt.ocir.io/nrcmxxv7sjse/ec_service_test:python-stg-20250417-114244"
     backendCommand: ["python", "-m", "http.server", "5000"]
 #ラベルの設定を記載
 selector:
