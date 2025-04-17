@@ -27,8 +27,8 @@ jobs:
                   cmd: |
                       IMAGE_TAG_NODE='nrt.ocir.io/nrcmxxv7sjse/ec_service_test:nodejs-${{ env.DATE_TAG }}'
                       IMAGE_TAG_PYTHON='nrt.ocir.io/nrcmxxv7sjse/ec_service_test:python-${{ env.DATE_TAG }}'
-                      yq eval '.deployment.template.frontendImage = strenv(IMAGE_TAG_NODE) |
-                      .deployment.template.backendImage = strenv(IMAGE_TAG_PYTHON)' -i oke-test/values.yaml
+                      yq eval '.deployment.template.frontendImage = env(IMAGE_TAG_NODE) |
+                      .deployment.template.backendImage = env(IMAGE_TAG_PYTHON)' -i oke-test/values.yaml
 
             # - name: Create Pull Request # プルリクエストの作成
             #   id: cpr
